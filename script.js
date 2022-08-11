@@ -213,7 +213,7 @@ function puzzlePieces(a1, a2) {
 	return true;
 }
 
-console.log(puzzlePieces([1,2,3,4,5],[5,4,3,2,1]));
+// console.log(puzzlePieces([1,2,3,4,5],[5,4,3,2,1]));
 
 // End Puzzle Pices. Two array adding where thay are same length
 
@@ -222,7 +222,7 @@ console.log(puzzlePieces([1,2,3,4,5],[5,4,3,2,1]));
 const multiply = arr => num => arr.map(x => x * num);  //Complete function 
 // --------------------------------------------------
 
-function multiply (arr){                              //Same function in another way
+function multiply1 (arr){                              //Same function in another way
     return function factor(int){
         return arr.map(x => x * int)
 	}
@@ -294,9 +294,29 @@ function summation(a){
 // ----------------------------Summation all number in an array--------------------------
 
 // -----------------Reverse Now------------------
-function reverseNow(str){
-    return str.split(' ').reverse().join(' ');
+function reverseString(str){
+    // return "Reverse Number: " + Number(String(str).split('').reverse().join(''));
+    return "Reverse Result: " + str.split('').reverse().join('');
 
 }
-console.log(reverseNow('Assalamu alikum ya sadiqii'));
+function reverseNumber(str){
+    return "Reverse Number: " + Number(String(str).split('').reverse().join(''));
+
+}
+console.log(reverseString('123466789'));
+console.log(reverseNumber(123456789));
+
+
+let rev = 0;
+let num1 = 123456;
+let lastDigit;
+
+while(num1 != 0){
+	lastDigit = num1 % 10;
+  rev = rev * 10 + lastDigit;
+  num1 = Math.floor(num1/10);
+}
+
+console.log("Reverse number : " + rev);
+
 // -----------------Reverse Now------------------
