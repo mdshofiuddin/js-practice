@@ -87,18 +87,11 @@ function randomNum(max,min){
 
 //--------------------Prime Number Generate------------------
 
-// function primeNumber(num =[1,5,5,7,9,8]){
-
-//     for(let i = 0; i > num.length;i++){
-
-//         let result = [];
-//         result = num.map((val => val % i == 0?false:val));
-//         // result.push()
-//     }
-//     return result
-// }
-
-// console.log(primeNumber);
+const isPrime = num => {
+    for(let i = 2, s = Math.sqrt(num); i <= s; i++)
+        if(num % i === 0) return false; 
+    return num > 1;
+}
 
 //--------------------Prime Number Generate------------------ 
 
